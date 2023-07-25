@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket form </title>
+</head>
+<body>
+     <h1>Movie Tickets Booking </h1>
+     <hr>
+     
+     <form>
+       
+        <label>Reservation Name-</label>
+        <input type="text" required min="4">
+        <br><br>
+        <label>contact Number-</label>
+        <input type="text" required>
+        <br><br>
+<label>E-mail ID-</label>
+<input type="text" required>
+<br><br>
+ <label>City-</label>
+ <input type="text" list="City">
+ <datalist id="City">
+     <select>
+     <option>Lucknow</option>
+     <option>GKP</option>
+     <option>Basti</option>
+     </select>
+ </datalist>
+ <br><br>
+<label>Cinema Hall-</label>
+<input type="text" list="Cinema Hall">
+<datalist id="Cinema Hall">
+    <option>INOX</option>
+    <option>PVR</option>
+    <option>SRS</option>
+    </datalist>
+<br><br>
+<label> Movie Name</label>
+<input type="text" list=" Movie Name">
+<datalist id="Movie Name">
+     <select >
+     <option>DDLJ</option>
+     <option>Frozen Princess</option>
+     <option>OMG</option>
+     </select>
+</datalist>
+<br><br>
+<label>No. Of Tickets-</label>
+<input type="text" list="No. Of Tickets">
+<datalist id="No. Of Tickets">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+</datalist>
+<br><br>
+<label>Select Seats-</label>
+<input type="text">
+<br><br>
+<label>No. Of Seats- </label>
+<input type="text" list="How Many Seats?">
+<datalist id="How Many Seats?">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+</datalist>
+<pre>    
+<label>Date-</label>                <label>Time-</label>
+<input type="date">    <input type="time">
+</pre>
+     <label>Total Price-</label>
+     <input type="text">
+     <br><br>
+     <labe>Payments Mode-</label>
+          <input type="text" list="Payments Mode">
+          <datalist id="Payments Mode">
+               <option>Case</option>
+               <option>UPI</option>
+               <option>Phone Pay</option>
+               <option>Google Pay</option>
+     
+          </datalist>
+          <br><br>
+          <input type="checkbox" >Confirm you want to book the ticket
+
+          
+<br><br>
+<pre>
+     
+<button>Book Now</button>            <button>Reset </button>  
+</pre> 
+
+     </form>
+    
+     
+
+
+</body>
+</html>
