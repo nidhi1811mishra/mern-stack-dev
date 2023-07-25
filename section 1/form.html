@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form </title>
+</head>
+<body>
+
+    <h1>Student Admission Form </h1>
+    <hr>
+    
+    <form>
+        <lebel>Full Name</lebel>
+        <input type="text" required minlength="4">
+           <br><br>
+         <label> Email Address</label>
+         <input type="email" >
+         
+<br><br>
+         <label>date of birth</label>
+         <input type="date">
+         <br><br>
+         <label>age</label>
+         <input type="number" min="30" max="99">
+         <br><br>
+         <label>Address</label>
+         
+         <br>
+         <textarea  cols="30" rows="10"></textarea>
+         <br><br>
+         <label>State of Residence</label>
+         <select>
+            <option>UP</option>
+            <option>Bihar</option>
+            <option>asam</option>
+            <option>UK</option>
+         </select>
+         <br><br>
+         
+
+        <label>seleact board  </label>
+        <input type="text" list="board">
+        <br><br>
+        <datalist id="board">
+            <option>UP</option>
+            <option>CBSE</option>
+            <option>ISC</option>
+            
+        </datalist>
+        
+<button>submit</button>
+<br><br>
+<label for="">gender</label>
+<input type="radio"name="gender">female
+<input type="radio" name="gender">male
+
+<br><br>
+<input type="checkbox">I Accept Term & Conditions
+<details>
+    <summary>
+        Term & condion
+    </summary>
+    <p>Lorem ipsum, dolor sit <mark>met consectetur adipisicing </mark>elit Eius?</p>
+</details>
+
+
+
+    </form>
+    
+</body>
+</html>
