@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+
+<style>
+       
+       body{
+        background-color: hwb(224 0% 45% / 0.384);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120vh; 
+        /* background-image: url(https://res.cloudinary.com/practicaldev/image/fetch/s--BuPz-p40--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png */
+        ) ;
+
+
+       }
+
+.myprofile{
+           background-color:rgba(255, 255, 255, 0.589);
+           margin: 0%;
+           width:20%;
+           /* border: 2px solid black; */
+           padding: 30px;
+           box-sizing:border-box;
+           border-radius: 10px ;
+           box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.349);
+
+
+}
+.myinput {
+     width:100%;  
+     padding: 2px; 
+         box-sizing: border-box; 
+         margin-bottom: 15%;
+}
+       .mybtn{  
+        background-color: blueviolet;
+        color: white;
+        padding: 5px;
+        width: 30%;
+        margin-top: 30px;
+        border: none;
+         border-radius: 15px; 
+         transition-duration: 300ms;}
+
+         .mybtn:hover{
+        background-color: rgba(137, 43, 226, 0.507);
+        transform: translate(-3px);}
+       
+        .mybtn:active{
+        outline: 3px solid black;
+    }
+    .myrst{  
+        background-color: blueviolet;
+        color: white;
+        padding: 5px;
+        width: 30%;
+        margin-top: 30px;
+        border: none;
+         border-radius: 15px; 
+         transition-duration: 300ms;}
+
+         .myrst:hover{
+        background-color: rgba(137, 43, 226, 0.507);
+        transform: translate(-3px);}
+       
+        .myrst:active{
+        outline: 3px solid black;}
+
+
+    .form-title{
+         font-family: Lato;
+         text-align: center;
+         font-size: 20px; 
+         /* border-bottom: 1px solid black; */
+         padding: 10px;
+         margin: 20px;}
+
+         .logo{
+        width: 50px;
+        margin: auto;
+        display:block;
+        /* background-color: rgba(100, 194, 237, 0.507); */
+     }
+
+     {
+        font-family: Lato;
+
+     }
+     .edit-profile{
+        text-align: center;
+     }
+
+
+</style>
+<body>
+    
+<div class="myprofile">
+    <img class="logo" src="data:image/png;base64,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
+     " alt="Profile">
+    <form>
+        <h5 class="edit-profile">Edit Profile</h5>
+      <hr>
+        <!-- <p>Edit Your Profile</p> -->
+        
+        
+        
+        
+        <label for="">First Name*</label>
+        <input class="myinput" type="text" placeholder="First Name">
+        <label for="">Last Name*</label>
+        <input class="myinput" type="text" placeholder="Last Name">
+
+        <label for="">Email Address*</label>
+        <input class="myinput" type="email" placeholder="Enter Your email ">
+        <label for="">Phone Number*</label>
+        <input class="myinput" type="text " placeholder=(+91)>
+        <label for="">Username*</label>
+        <input class="myinput" type="text" placeholder= "Username">
+        <label for="">Password*</label>
+        <input class="myinput" type="password" placeholder="Password">
+
+        <!-- <label for=""> <br>Change my password</label><br> -->
+       
+
+        <button class="mybtn">Update</button>  <button class="myrst">Reset</button>
+
+
+    </form>
+
+</div>
+
+
+
+</body>
+</html>

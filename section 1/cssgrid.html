@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssgrid</title>
+<style>
+    .child{
+
+    
+     background-color:aquamarine;
+    border: 3px solid black;
+    padding: 30px;
+     font-size: 30px; 
+    /* width: 30%; */
+    /* box-sizing: border-box; */
+    }
+
+    .Parent{
+            
+        display: grid;
+    
+        grid-template-columns: 200px 500px 300px;  
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(4,1fr);  */ 
+        /* justify-content: space-between; */
+        /* margin: 0 300px; */
+        /* grid-template-rows: 1fr 1fr 1fr; */
+       /* row-gap: 30px; */
+        /* column-gap: 40px; */
+
+    }
+</style>
+
+
+
+</head>
+<body>
+
+
+    <div class="Parent">
+
+        <div class="child">
+        <h3>Child 1</h3></div>
+
+            <div class="child">
+            <h3>Child 2</h3></div>
+
+                <div class="child">
+                <h3>Child 3</h3></div>
+
+                <div class="child">
+                    <h3>Child 4</h3></div>
+
+                    <div class="child">
+                        <h3>Child 5</h3></div>
+
+                        <div class="child">
+                            <h3>Child 6</h3></div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    
+</body>
+</html>

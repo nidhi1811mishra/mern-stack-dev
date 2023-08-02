@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px!important;
+    padding: 20px;
+    /* margin-right: 5px; */
+}
+
+.bg-primary{
+    background-color: blueviolet!important;
+
+}
+.icon{
+    display: flex;
+    padding-right: 20px;
+    max-height: 100;
+}
+.btn-primary{
+    background-color: blueviolet;
+}
+{  
+font-family: Lato;
+}
+p{
+    font-size: 20px;
+}
+h3{
+    font-size: 25px;
+}
+.ms-2{
+    font-size:25px ;
+
+}
+.bi{
+    flex: 0.3;
+    max-width: 300px;
+     padding-right: 30px;
+}
+
+
+.mt-7{
+    margin-top: 45%;
+    margin-left:30%;
+    
+}
+
+.icon{
+    font-size: 50px;
+}
