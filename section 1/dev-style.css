@@ -1,0 +1,39 @@
+*{padding: 0;
+   margin: 0;
+} 
+.DEV{
+   display: grid;
+}  
+.logo{
+   
+      object-fit:container;
+      height: 60px;
+      margin-left:5px; 
+}
+.upperLeft .logo{
+   padding: 10px; 
+      cursor: pointer; 
+}
+.search{
+   display: flex;
+     flex:0.2; 
+      width:50px; 
+     align-items: center;
+     background-color:aliceblue;
+     padding: 10px;
+     border-radius: 20px;
+     margin-left:5px: ;
+}
+.search input{
+    border: none;
+     width: 100%;
+     padding: 10px;
+     outline: none;
+     font-size: medium;
+     background-color: transparent;
+}
+   
+.upperLeft{
+    display: flex;
+    align-items: center;
+}
