@@ -10,30 +10,51 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .card{
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+      }
+      .card-body{
+        transform: translateZ(50px);
+      }
+      /* .my-img{
+        height: 350px;
+        object-fit:contain;
+        background-color: red;
+
+      } */
+    </style>
 </head>
 
 <body>
   <header class="bg-dark text-white">
-    <div class="container py-5">
-      <h1 class="fw-bold display-4 text-center">Best Camera Offers</h1>
-      <h3 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur facere
+    <div class="container py-5" style="perspective: 500px;">
+      <h1 class="fw-bold display-4 text-center page-title">Best Camera Offers</h1>
+      <h3 class="text-center sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur facere
         dignissimos!</h3>
+        <div class="input-group  mt-5 w-75 mx-auto my-input">
+          <input type="text" class="form-control">
+          <button class="btn btn-primary"> <i class="fa fa-search" aria-hidden="true"> </i></button>
+          </div>
+
     </div>
   </header>
 
   <section class="container">
 
-    <div class="row">
-      <div class="col-md-3">
+    <div class="row mt-5">
+      <div class="col-md-3 ">
         <div class="card">
-          <img class="card-img-top"
+          <img class="card-img-top my-img"
             src="https://www.instax.in/cdn/shop/products/1_4ed4bd65-7357-411b-bf02-d6f9ca79b793.png?v=1673867172"
             alt="">
           <div class="card-body">
             <p class="fw-bold h4 text-muted">Instak</p>
             <h3>Mini9 Camera</h3>
-            <p><i class="fa-solid fa-star text-warning></i> 4.5 Star from 8362 Review</p>
+            <p><i class="fa-solid fa-star text-warning"></i></p>
                         <h2>₹4999.0</h2>
+                        
 
                     </div>
                     <div class=" card footer">
@@ -59,27 +80,6 @@
             <p><i class="fa-solid fa-star text-warning"></i> 4.5 Star from 8362 Review</p>
             <h2>₹4999.0</h2>
 
-          </div>
-          <div class="card footer">
-            <button class="btn btn-primary w-50">
-              <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-            </button>
-            <button class="btn btn-outline-primary w-50">
-              <i class="fa-solid fa-bolt"></i> Buy Now
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <img class="card-img-top"
-            src="https://www.instax.in/cdn/shop/products/1_4ed4bd65-7357-411b-bf02-d6f9ca79b793.png?v=1673867172"
-            alt="">
-          <div class="card-body">
-            <p class="fw-bold h4 text-muted">Instak</p>
-            <h3>Mini9 Camera</h3>
-            <p><i class="fa-solid fa-star text-warning"></i> 4.5 Star from 8362 Review</p>
-            <h2>₹4999.0</h2>
 
           </div>
           <div class="card footer">
@@ -109,6 +109,28 @@
               <i class="fa-solid fa-cart-shopping"></i> Add to Cart
             </button>
             <button class="btn btn-outline-primary w-50">
+              <i class="fa-solid fa-bolt"></i> Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://www.instax.in/cdn/shop/products/1_4ed4bd65-7357-411b-bf02-d6f9ca79b793.png?v=1673867172"
+            alt="">
+          <div class="card-body">
+            <p class="fw-bold h4 text-muted">Instak</p>
+            <h3>Mini9 Camera</h3>
+            <p><i class="fa-solid fa-star text-warning"></i> 4.5 Star from 8362 Review</p>
+            <h2>₹4999.0</h2>
+
+          </div>
+          <div class="card footer">
+            <button class="btn btn-primary d-flex">
+              <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+            <button class="btn btn-outline-primary d-flex ">
               <i class="fa-solid fa-bolt"></i> Buy Now
             </button>
           </div>
@@ -133,6 +155,67 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+      ScrollReveal().reveal(".page-title", {
+        delay:300,
+        origin:"bottum",
+        distance:"1000px",
+        duration:1000,
+        rotation:{
+          x:30,
+          y:0,
+          z:30,
+
+         } });
+        ScrollReveal().reveal(".sub-title", {
+        delay:300,
+        origin:"bottum",
+        distance:"1000px",
+        duration:1000,
+        rotation:{
+          x:-90,
+          y:0,
+          z:30,
+
+        } });
+        ScrollReveal().reveal(".my-input", {
+        delay:300,
+        origin:"right",
+        distance:"100px",
+        duration:500,
+        rotation:{
+          x:30,
+          y:0,
+          z:30,
+
+        } });
+      
+      ScrollReveal().reveal(".card", {
+        delay:300,
+        origin:"bottum",
+        distance:"50px",
+        duration:500,
+        intervel :200,
+        rotation:{
+          x:30,
+          y:0,
+          z:30,
+
+        }
+      });
+      
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll('.card'),{
+        max:20,
+        speed:1000,
+        glare:true,
+      });
+    </script>
 </body>
 
 </html>
