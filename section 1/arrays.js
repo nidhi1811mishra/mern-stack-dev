@@ -1,15 +1,19 @@
+
 const myarray = ['name',3245,345.66,true,console.log ];
 
 console.log(myarray);
 console.log(typeof myarray);
 
 const movies= ['KGF','Pushpa','DDLJ','RRR','Thor','Insidious'];
+console.log(movies)
 console.log(movies.length); //also work with strings
 // Addding new element
 console.log('adding new element')
 movies.push('Iron Man');// add new element
+console.log(movies.length)
 movies.unshift('Badman'); //add new elelment at the begining
 console.log(movies);
+console.log(movies.length)
 
 // Indexing
 console.log('indexding');
