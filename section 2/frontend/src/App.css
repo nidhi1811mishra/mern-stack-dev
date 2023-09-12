@@ -1,0 +1,56 @@
+
+.myclass{
+  font-size: 30px;
+  color:crimson;
+  text-align: center; 
+}
+.Nav-item .active{
+  border-bottom:2px solid crimson ;
+  color: crimson !important;
+
+  
+}
+
+
+  
+.like{
+  /* width: 100px; */
+  
+  border: none;
+  background-color: transparent;
+  }
+  .comments{
+    /* width: 105px; */
+    border: none;
+    background-color: transparent;
+    /* display: flex; */
+  }
+  .share{
+    border: none;
+    background-color: transparent;
+  }
+  .icon{
+    display: flex;
+    background-color: white;
+  }
+  .bookmark{
+    /* display: flex; */
+    /* justify-content: end; */
+    /* align-items: end; */
+    /* margin-left: 55%; */
+    border: none;
+    background:transparent;
+    margin-left: 130px;
+  }
+/* .img{ */
+  /* width:300px; */
+  /* height: 450px; */
+  /* margin-top: 50px; */
+  /* padding:50px; */
+/* } */
+
+
+.myimg{
+  object-fit:contain;
+  height:200px;
+}
