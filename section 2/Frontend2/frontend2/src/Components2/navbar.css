@@ -1,0 +1,18 @@
+
+  .navbar-nav{
+    align-items: center;
+    margin-left: 60%;
+    
+    
+  }
+  .logo{
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+  }
+.nav-item:hover{
+    color: blue;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid rgba(0, 0, 255, 0.863);
+
+}

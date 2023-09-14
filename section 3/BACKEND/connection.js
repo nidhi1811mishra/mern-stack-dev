@@ -4,8 +4,10 @@ const url= "mongodb+srv://nidhi1811:nidhimishra@cluster0.2arfh9h.mongodb.net/Myd
 
 mongoose.connect(url)
 .then((result) => {
-    console.log('Database connected');
+    console.log('Database successfully  connected');
 }).catch((err) => {
     console.log(err);
     
 });
+
+module.exports=mongoose;

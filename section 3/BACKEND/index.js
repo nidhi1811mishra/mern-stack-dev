@@ -1,18 +1,27 @@
 // import express
 const express = require('express');
+const userRouter = require('./routers/userRouter');
 
+const productRouter = require('./routers/productRouter');
 //initialize express
-const aap = express();
+const app = express();
 const port = 5000;
+app.use('/user', userRouter );
  
-aap.get('/',(req, res)=>{
+app.get('/',(req, res)=>{
     res.send('respons from express')
 })
 
-aap.get('/add',(req,res)=>{
+app.get('/add',(req,res)=>{
     res.send('response from add')
+})
+app.get('/getall',(req,res)=>{
+    res.send('response from getall')
+})
+app.get('/update',(req,res)=>{
+    res.send('response from update')
 })
 
 
 //startin the server
-aap.listen(port,()=>{console.log('server started')});
+app.listen(port,()=>{console.log('server started')});

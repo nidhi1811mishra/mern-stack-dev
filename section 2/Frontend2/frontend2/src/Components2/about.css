@@ -1,0 +1,38 @@
+#about{
+    overflow: hidden;
+    width: 100vw;
+    max-width:99rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    text-align:center;
+    margin: 0;
+    background-color:gray;
+}
+
+.profile{
+    width: 20rem;
+    height: 20rem;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+}
+.edu{
+    width: 20rem;
+    height: 20rem;
+    box-sizing:content-box;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    text-align: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
