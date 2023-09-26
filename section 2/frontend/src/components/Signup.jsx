@@ -1,9 +1,11 @@
 import {useFormik} from 'formik'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
+  name: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
     .required('Required'),
@@ -14,6 +16,8 @@ const SignupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
 });
 const Signup = () => {
+
+  const navigate = useNavigate()
    
    //initialize formik
    const signupForm = useFormik({
@@ -24,8 +28,35 @@ const Signup = () => {
       confirm:'',
 
     },
-    onSubmit:(values)=>{
+    onSubmit: async (values)=>{
       console.table(values);
+
+     const res = await fetch('http://localhost:5000/user/add',{
+         method:'POST',
+         body: JSON.stringify(values),
+         headers:{
+          'Content-Type' : 'application/json',
+          
+         }
+      });
+        
+      console.log(res.status);
+      if(res.status === 200){
+        Swal.fire({
+          icon:'success',
+          title:'Signup Success',
+          text:'Now Login to Continue'
+        })
+        navigate('/login');
+      }
+      else{
+        Swal.fire({
+          icon:'error',
+          title:'Somthing went wrong',
+          text:'Please Try Again'
+        })
+      }
+      
     },
     validationSchema : SignupSchema
    })
@@ -48,11 +79,11 @@ const Signup = () => {
        
         <label htmlFor="">Password</label>
         <span style={{color:"red",fontSize: 10, marginLeft:10}}>{signupForm.errors.password}</span>
-        <input id="password" onChange={signupForm.handleChange} value={signupForm.values.password}  type="text" className='form-control' placeholder='Password'  />
+        <input id="password" onChange={signupForm.handleChange} value={signupForm.values.password}  type="password" className='form-control' placeholder='Password'  />
        
         <label htmlFor=""> Confirm Password</label>
         <span style={{color:"red",fontSize: 10, marginLeft:10}}>{signupForm.errors.password}</span>
-        <input id="confirm" onChange={signupForm.handleChange} value={signupForm.values.confirm}  type="text" className='form-control' placeholder='confirm Password'  />
+        <input id="confirm" onChange={signupForm.handleChange} value={signupForm.values.confirm}  type="password" className='form-control' placeholder='confirm Password'  />
         
         <p className='mt-3 text-center'>Already a member? Log in</p>
         <button type='submit' className='btn btn-primary d-grid mx-auto'>Sign up</button>

@@ -11,10 +11,15 @@ import ProductList from './components/ProductList';
 import StateManagement from './components/StateManagement';
 import Instagram from './components/Instagram';
 import Contact from './components/Contact';
+import ManageUsers from './components/ManageUsers';
+import { Toaster } from 'react-hot-toast';
+import UpdateUser from './components/UpdateUser';
+import ManageProduct from './components/ManageProduct';
 
 function App() {
   return (
    <div>
+    <Toaster position='top-right'/>
     {/* <Link href="/signup">Signup</Link>
     <a href="/signup">Signup</a>
     <Link href="/login">Login</Link> */}
@@ -32,6 +37,9 @@ function App() {
       <Route path='/statemanagement' element={<StateManagement/>}/>
       <Route path='/Instagram' element={<Instagram/>}/>
       <Route path='/Contact' element={<Contact/>}/>
+      <Route path='/manageusers' element={<ManageUsers />}/>
+      <Route path='/updateuser/:id' element={<UpdateUser />}/>
+      <Route path='/manageproduct' element={<ManageProduct />}/>
      </Routes>
     </BrowserRouter> 
    </div>

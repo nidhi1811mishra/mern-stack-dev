@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
-  <div className="container-fluid ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid back">
     <div className='nav_border'>
       <img className='logo' src="https://cdn0.iconfinder.com/data/icons/mobile-device/512/uppercase-latin-letter-round-n-keyboard-2-512.png" alt="" />
     <a className="navbar-brand" href="#">
@@ -48,11 +48,11 @@ const Navbar = () => {
             Work 
           </NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink className="nav-link" to="/experience">
             Experience 
           </NavLink>
-        </li>
+        </li> */}
 
         <li className="nav-item">
           <NavLink className="nav-link" to="/contact">

@@ -28,9 +28,9 @@
     padding: 0 2rem;
 }
 .skillbars{
-    max-width: 1.5rem;
+    /* max-width: 1.5rem; */
     /* width: 70vw; */
-    max-width: 80%;
+    /* max-width: 50%; */
     text-align:left;
     margin-right: 2rem;
     /* margin-left: 50%; */
@@ -38,7 +38,7 @@
 .skillbar{
     display: flex;
     margin: 1rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1rem;
     border-radius: 0.5rem;
     background-color: whitesmoke;
 }

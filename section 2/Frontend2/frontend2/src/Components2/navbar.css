@@ -11,8 +11,9 @@
     width: 4rem;
   }
 .nav-item:hover{
-    color: blue;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgba(0, 0, 255, 0.863);
+    /* color:blue; */
+    /* padding-bottom: 0.5rem; */
+    border-bottom: 3px solid ;
 
 }
+

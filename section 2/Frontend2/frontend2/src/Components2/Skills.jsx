@@ -6,7 +6,7 @@ const Skills = () => {
         <section id='skills'>
              <div className='text'> 
 
-           <span className='skilltitle text-white '>What I do</span>
+           <span className='skilltitle text-white '>My Skills</span>
              <span className='skillDesc text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente non dicta officia rem obcaecati ducimus fuga ab nulla vel repudiandae! </span>
              </div>
              
@@ -29,7 +29,8 @@ const Skills = () => {
              </div>
              <div className='skillbar'>
               <div className='skill_bar_text'>
-                <img className='skill_img' src="https://d3sxshmncs10te.cloudfront.net/icon/premium/png-256/3421748.png?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTY5NDY0OTYwMCwicSI6bnVsbCwiaWF0IjoxNjk0NDQ2MzEyfQ__.b37415448719cc260130bf4f3fbd69ffc800bff464b018a1ed7737a0251c8dc3" alt="" />
+                <img className='skill_img' src="https://cdn.xxl.thumbs.canstockphoto.com/ux-ui-design-icon-vector-outline-illustration-ux-ui-design-icon-vector-ux-ui-design-sign-color-eps-vectors_csp84355634.jpg" alt="" />
+                {/* <img className='skill_img' src="https://d3sxshmncs10te.cloudfront.net/icon/premium/png-256/3421748.png?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTY5NDY0OTYwMCwicSI6bnVsbCwiaWF0IjoxNjk0NDQ2MzEyfQ__.b37415448719cc260130bf4f3fbd69ffc800bff464b018a1ed7737a0251c8dc3" alt="" /> */}
                 <h2>UI/UX Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae unde tenetur officia.</p>
               </div>

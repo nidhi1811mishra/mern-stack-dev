@@ -1,7 +1,8 @@
 #about{
     overflow: hidden;
     width: 100vw;
-    max-width:99rem;
+    /* max-width: 65rem; */
+    height: 90vw;
     display: flex;
     /* flex-direction: column; */
     /* justify-content: center; */
@@ -9,30 +10,47 @@
     margin: 0;
     background-color:gray;
 }
-
-.profile{
-    width: 20rem;
-    height: 20rem;
-    margin: 3rem;
+.title{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    margin-bottom: 1.Srem;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    object-fit: cover;
+    justify-content: center; 
 }
-.edu{
-    width: 20rem;
-    height: 20rem;
-    box-sizing:content-box;
+.abouts{
+    margin-top: 6rem;
+    display: flex;
+}
+.about-pic{
+    width:20rem;
+    height:20rem;
+    margin-top: 5rem;
+}
+.exp_img{
+    width: 2rem;
+}
+.edu_img{
+    width: 3rem;
+}
+.about_1{
+    height:10rem;
+    width: 15rem;
+    display: flex;
+    margin: 1rem;
+    padding:1.5rem;
+    border-radius: 0.5rem;
     background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
     text-align: center;
 }
-.text{
+.about_2{
+    height:10rem;
+    width: 15rem;
     display: flex;
-    flex-direction: column;
+    margin: 1rem;
+    padding:1.5rem;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
     text-align: center;
-    justify-content: center;
-    
-    
 }

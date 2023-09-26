@@ -68,7 +68,16 @@ const Navbar = () => {
             Instagram
           </NavLink>
         </li>
-       
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/manageusers">
+            Manage User
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/manageproduct">
+            Manage Product
+          </NavLink>
+        </li>
 
         <li className="nav-item dropdown">
           <a

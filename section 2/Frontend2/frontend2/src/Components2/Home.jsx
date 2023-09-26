@@ -19,6 +19,7 @@ const  Home = () => {
      <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quaerat suscipit saepe hic magnam ab velit veniam accusantium. Omnis.</p>
      </div>
       </div>
+
       <div className='introcontent_2 w-25 h-25'>
       <div className=' get'>
         
@@ -28,7 +29,7 @@ const  Home = () => {
         </div>
         </div>
          {/* <div className='img_1 bg-light'> */}
-       <img className='img_1 bg' src="https://i.pinimg.com/550x/8d/52/c5/8d52c5c35382908832ffedb21c1e63b0.jpg" alt="" />
+       {/* <img className='img_1 bg' src="https://i.pinimg.com/550x/8d/52/c5/8d52c5c35382908832ffedb21c1e63b0.jpg" alt="" /> */}
        
          {/* </div> */}
          <img className='img_1 bg' src="https://ds393qgzrxwzn.cloudfront.net/resize/m600x500/cat1/img/images/0/v4MbkrAHcK.jpg" alt="" />

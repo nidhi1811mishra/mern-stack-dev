@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <div  className='mt-5 back'>
         
-        <div className='col-md-4 col-sm-6 mx-auto main '>
+        <div className='col-md-4 col-sm-6 mx-auto'>
           
             <div className=' card bg-danger-subtle  m-auto'>
                 <h3 className='m-auto  p-4 text-align-center'>Contact Us</h3>
