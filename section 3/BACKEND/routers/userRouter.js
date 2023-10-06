@@ -95,3 +95,5 @@ router.post('/authenticate', (req, res) => {
 
 module.exports = router;
 
+// step -1 : backend
+// step -2 : npm init -y

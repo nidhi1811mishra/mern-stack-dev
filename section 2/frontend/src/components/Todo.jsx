@@ -1,3 +1,4 @@
+import { AnimatePresence,motion } from 'framer-motion';
 import React, { useState } from 'react'
 
 const Todo = () => {
@@ -15,7 +16,7 @@ const [todoList, setTodoList] = useState([]);
             console.log(index) ; 
             const temp =  todoList;
             temp.splice(index,1);
-            setTodoList(...temp);
+            setTodoList([...temp]);
         }
     
   return (
@@ -26,10 +27,21 @@ const [todoList, setTodoList] = useState([]);
                 <input type="text" className='form-control' onKeyDown={addNewTodo} />
             </div>
             <div className='card-body'>
-                {todoList.map((todo,index)=>{return <div className={`d-flex justify-content-between p-3 ${index%2===0 ? 'bg-body-secondary':''}`}>
+                <AnimatePresence mode='popLayout'>
+
+
+                {todoList.map((todo,index)=>{return <motion.div 
+                layout
+                 key={todo}
+                 initial={{opacity:0, scale:0.5 ,x:'50%'}}
+                 animate={{opacity:1,scale:1, x:0}}
+                 exit={{ opacity:0,}}
+                className={`d-flex justify-content-between p-3 ${index%2===0 ? 'bg-body-secondary':''}`}>
                     <h3>{index +1}{todo}</h3>
-                    <button className='btn btn-danger' onclick={()=>{deleteTodo(index)}}>Delete</button>
-                    </div>})}
+                    <button className='btn btn-danger' onClick={()=>{deleteTodo(index)}}>Delete</button>
+                    </motion.div>})}
+
+                </AnimatePresence>
 
             </div>
 

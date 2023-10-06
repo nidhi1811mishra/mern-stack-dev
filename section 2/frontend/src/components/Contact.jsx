@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import * as Yup from 'yup';
+import{motion} from 'framer-motion';
 const contactSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Too Short!')
@@ -23,7 +24,10 @@ const Contact = () => {
     validationSchema: contactSchema
   })
   return (
-    <div  className='mt-5'>
+    <motion.div 
+    initial={{opacity:0, scale:0.2 ,y:'100%'}}
+    animate={{opacity:1, scale:1 , y:0}}
+    className='mt-5'>
         
         <div className='col-md-4 col-sm-6 mx-auto'>
           
@@ -50,7 +54,7 @@ const Contact = () => {
 
             </div>
              
-        </div>
+        </motion.div>
     
   )
 }

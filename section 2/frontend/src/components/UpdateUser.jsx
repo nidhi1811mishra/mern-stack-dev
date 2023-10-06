@@ -27,6 +27,7 @@ const UpdateUser = () => {
         headers:{
           'Content-Type':'application/json'
         }
+        
       });
       console.log(res.status);
       if(res.status === 200){

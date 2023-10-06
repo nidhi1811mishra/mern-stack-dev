@@ -3,8 +3,13 @@ import React from 'react'
 
 import { json } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import useAppContext from '../AppContext';
+import{motion} from 'framer-motion';
 const Login = () => {
+
+  
+ const {setLoggedin} = useAppContext();
+
   const loginForm = useFormik({
     initialValues: {
 
@@ -28,6 +33,11 @@ const Login = () => {
           icon: 'success',
           title: 'Login Success'
         })
+
+        setLoggedin(true);
+        const data = await res.json();
+        sessionStorage.setItem('user',JSON.stringify(data));
+
       } else if (res.status === 400) {
         Swal.fire({
           icon: 'error',
@@ -40,7 +50,12 @@ const Login = () => {
   })
   return (
 
-    <div className='container mt-5'>
+    <motion.div
+    initial={{opacity:0 , scale:0.2,  x:'100%'}}
+     animate={{opacity:1, scale:1, x:0}}
+
+      // transition={{duration:10, type:'spring'}}
+     className='container mt-5'>
       <div className='card bg-light w-25 m-auto' >
         <h3 className='text-center mt-3'>Login</h3>
         <div className='card-body'>
@@ -60,7 +75,7 @@ const Login = () => {
 
 
       </div>
-    </div>
+    </motion.div>
 
 
   )

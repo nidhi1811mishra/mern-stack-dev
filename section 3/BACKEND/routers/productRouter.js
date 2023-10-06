@@ -18,16 +18,16 @@ product.post('/add', (req, res) => {
 });
 
 
-product.get('/getbyid/:id',(req, res)=>{
-   // res.send('response from user getbyid');
-   Model.findById(req.params.id)
-   .then((result)=>{
-      res.json(result);
-   })
-   .catch((err)=>{
-      res.status(500).json(err);
-   })
- });
+// product.get('/getbyid/:id',(req, res)=>{
+//    // res.send('response from user getbyid');
+//    Model.findById(req.params.id)
+//    .then((result)=>{
+//       res.json(result);
+//    })
+//    .catch((err)=>{
+//       res.status(500).json(err);
+//    })
+//  });
 
  product.get('/getall',(req,res)=>{
    //  res.send('response from user getall')
@@ -63,6 +63,7 @@ product.get('/getbyid/:id',(req, res)=>{
       res.status(500).json(err);
    })
  });
+
  product.put('update/:id',(req,res)=>{
  model.findByIdAndUpdate(req.params.id,req.body, {new:true})
  .then((result)=>{
@@ -72,6 +73,7 @@ product.get('/getbyid/:id',(req, res)=>{
    res.status(500).json(err);
  })
  });
+
  product.delete('/delete/:id',(req,res)=>{
    //  res.send('response from user delete')
     Model.findByIdAndDelete(req.params.id)
@@ -82,6 +84,22 @@ product.get('/getbyid/:id',(req, res)=>{
        res.status(500).json(err);
     })
  });
+
+ product.post('/authenticate', (req, res) => {
+   Model.findOne(req.body)
+      .then((result) => {
+         console.log(result);
+         if (result) res.json(result);
+         else res.status(400).json({ message: 'Not Find' });
+      }).catch((err) => {
+         console.log(err);
+         res.status(500).json(err);
+      });
+})
+
+
+
+
 
 
 

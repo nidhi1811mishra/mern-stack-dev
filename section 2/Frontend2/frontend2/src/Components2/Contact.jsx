@@ -24,13 +24,13 @@ const Contact = () => {
     validationSchema: contactSchema
   })
   return (
-    <div  className='mt-5 back'>
+    <div  className=' bgPart'>
         
         <div className='col-md-4 col-sm-6 mx-auto'>
           
-            <div className=' card bg-danger-subtle  m-auto'>
+            <div className=' card m-ai=uto '>
                 <h3 className='m-auto  p-4 text-align-center'>Contact Us</h3>
-              <div className='card-body'>
+              <div className='card-body  '>
                 <form onSubmit={contactForm.handleSubmit} >
                   <span style={{color:"red",fontSize: 10, marginLeft:10}} >{contactForm.errors.name}</span>
                 <input className=' p-1  form-control' id='name' onChange={contactForm.handleChange} value={contactForm.values.name} type="text" placeholder='Name' />

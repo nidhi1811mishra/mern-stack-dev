@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
@@ -32,6 +33,7 @@ fetchUserData();
 
 const deleteUser = async (id)=> {
   console.log(id);
+  // used to fetch the backend with frontend
   const res = await fetch('http://localhost:5000/user/delete/'+id,{method : 'DELETE'});
   console.log(res.status)
   if(res.status === 200){
@@ -57,9 +59,17 @@ const deleteUser = async (id)=> {
     </tr>
   </thead>
   <tbody>
+    <AnimatePresence mode='poplayout'>
+       
+
    {
-    userList.map( (user, index)=>(
-      <tr>
+     userList.map( (user, index)=>(
+       <motion.tr 
+       layout
+       key={user._id}
+       animate={{opacity:1}}
+       exit={{opacity:0}}
+       >
         <td>{index+1}</td> 
         <td> {user._id} </td>
         <td>{user.name}</td>
@@ -71,9 +81,10 @@ const deleteUser = async (id)=> {
           <td>
           <button className='btn btn-danger' onClick={()=> {deleteUser (user._id)}}>Delete</button>
           </td>      
-      </tr>
+      </motion.tr>
     ))
-   }
+  }
+  </AnimatePresence>
   </tbody>
 </table>
  </div>

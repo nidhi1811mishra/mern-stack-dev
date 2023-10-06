@@ -3,6 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';
+import {motion} from 'framer-motion';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -33,6 +34,7 @@ const Signup = () => {
 
      const res = await fetch('http://localhost:5000/user/add',{
          method:'POST',
+        //  convert js into json
          body: JSON.stringify(values),
          headers:{
           'Content-Type' : 'application/json',
@@ -62,7 +64,10 @@ const Signup = () => {
    })
    
   return (
-    <div className='container mt-5'>
+    <motion.div 
+    initial={{opacity:0, scale:0.2, x:'100%'}}
+    animate={{opacity:1, scale:1, x:0}}
+     className='container mt-5'>
       <div className='card bg-light w-25 m-auto' >
         <h3 className='text-center mt-3'>Sign Up</h3>
         <div className='card-body'>
@@ -94,7 +99,7 @@ const Signup = () => {
 
 
         </div>
-    </div>
+    </motion.div>
   )
 }
 
