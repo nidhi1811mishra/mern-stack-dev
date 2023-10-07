@@ -2,6 +2,7 @@
 const express = require('express');
 const userRouter = require('./routers/userRouter');
 const productRouter = require('./routers/productRouter');
+const utilRouter = require('./routers/util');
 
 const cors= require('cors');
 //initialize express
@@ -16,6 +17,9 @@ app.use(cors({
 }))
 app.use('/user', userRouter );
 app.use('/product',productRouter);
+app.use('/util',utilRouter);
+
+
  
 app.get('/',(req, res)=>{
     res.send('respons from express')
